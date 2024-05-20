@@ -45,6 +45,9 @@ const App = () => {
                                         
                     <div className='col-sm'>
                         <ExpenseTotal />
+                    </div> 
+                    <div className='col-sm'>
+                        <Currency/>
                     </div>   
                        
                         {
@@ -69,9 +72,7 @@ const App = () => {
                         <AllocationForm/>
                     </div>    
 
-                    <div className='col-sm'>
-                        <Currency/>
-                    </div>   
+                      
 
                 </div>
             </div>
