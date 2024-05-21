@@ -5,7 +5,7 @@ import { AppContext } from '../context/AppContext';
 const Budget = () => {
     const { budget,currency } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
-    const [newCurrency, setNewCurrency] = useState(currency);
+    //const [newCurrency, setNewCurrency] = useState(currency);
 
 
     const handleBudgetChange = (event) => {
@@ -14,10 +14,10 @@ const Budget = () => {
             
               
     }
-         setNewCurrency(newCurrency);
+         //setNewCurrency(newCurrency);
     return (
 <div className='alert alert-secondary'>
-<span>Budget: {newCurrency}{newBudget}</span>
+<span>Budget: {currency}{newBudget}</span>
 <input type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
     );
