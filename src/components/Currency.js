@@ -31,20 +31,14 @@ const Currency = () => {
   }; 
 
   return (
-        <div className='alert alert-success'> Currency {"("}
-        {currencyLabel()}
-        {")"} {
-    //   <button name="Currency" id="Currency" onClick={() => setIsOpen(!isOpen)}>
-    //     <option value="$" onClick={() => setCurrencyHandler("$")}>$ Dollar</option>
-    //     <option value="£" onClick={() => setCurrencyHandler("£")}>£ Pound</option>
-    //     <option value="€" onClick={() => setCurrencyHandler("€")}>€ Euro</option>
-    //     <option value="₹" onClick={() => setCurrencyHandler("₹")}>₹ Ruppee</option>
-    //   </button>	
-      <DropdownButton id="dropdown-basic-button" title="Dropdown button" name="Currency"  onClick={() => setIsOpen(!isOpen)}>
+        <div className='alert alert-success'>  
+         {	
+      <DropdownButton id="dropdown-basic-button" title={`Currency (${currencyLabel()})`}
+       name="Currency"  onClick={() => setIsOpen(!isOpen)}>
       <Dropdown.Item onClick={() => setCurrencyHandler("$")}>$ Dollar</Dropdown.Item>
       <Dropdown.Item onClick={() => setCurrencyHandler("£")}>£ Pound</Dropdown.Item>
       <Dropdown.Item onClick={() => setCurrencyHandler("€")}>€ Euro</Dropdown.Item>
-      <Dropdown.Item onClick={() => setCurrencyHandler("€")}>₹ Ruppee</Dropdown.Item>
+      <Dropdown.Item onClick={() => setCurrencyHandler("₹")}>₹ Ruppee</Dropdown.Item>
     </DropdownButton>
     
       }	
