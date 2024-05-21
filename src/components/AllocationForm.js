@@ -9,9 +9,21 @@ const AllocationForm = (props) => {
     const [action, setAction] = useState('');
 
     const submitEvent = () => {
+        const enteredAmount = Number(cost);
 
+        // check if the entered amount is a number
+        if (Number.isNaN(enteredAmount)) {
+          alert("Please enter a number.");
+          return;
+        }
+    
+        // check if the entered amount is an integer number
+        if (!Number.isInteger(enteredAmount)) {
+          alert("Please enter a  valid number.");
+          return;
+        }
             if(cost > remaining) {
-                alert("The value cannot exceed remaining funds  £"+remaining);
+                alert("The amount cannot exceed remaining funds  £"+remaining);
                 setCost("");
                 return;
             }
@@ -63,7 +75,7 @@ const AllocationForm = (props) => {
                     
                     <input
                         required='required'
-                        type='number'
+                       // type='number'
                         id='cost'
                         value={cost}
                         style={{ marginLeft: '0.5rem' , size: 10}}
